@@ -1,113 +1,54 @@
-import Image from "next/image";
-
 import { DashedLine } from "../dashed-line";
+import { UploadStep } from "../process-steps/upload-step";
+import { VoiceSelectionStep } from "../process-steps/voice-selection-step";
+import { AIConversionStep } from "../process-steps/ai-conversion-step";
+import { ReviewStep } from "../process-steps/review-step";
+import { PublishStep } from "../process-steps/publish-step";
 
 import { cn } from "@/lib/utils";
 
 const topItems = [
   {
-    title: "Reusable issue templates.",
+    title: "Upload your manuscript.",
     description:
-      "Draft lightning-fast documents with our Smart Instructions and Templates.",
-    images: [
-      {
-        src: "/resource-allocation/templates.webp",
-        alt: "Issue template interface",
-        width: 495,
-        height: 186,
-      },
-    ],
+      "Simply upload your book in any format - PDF, Word, or text file.",
+    component: UploadStep,
     className:
-      "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
-    fade: [""],
+      "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8",
   },
   {
-    title: "Simplify your stack.",
-    description: "No more Confluence, SharePoint, or Microsoft Word.",
-    images: [
-      { src: "/logos/jira.svg", alt: "Jira logo", width: 48, height: 48 },
-      { src: "/logos/excel.svg", alt: "Excel logo", width: 48, height: 48 },
-      {
-        src: "/logos/notion.svg",
-        alt: "Notion logo",
-        width: 48,
-        height: 48,
-      },
-      { src: "/logos/word.svg", alt: "Word logo", width: 48, height: 48 },
-      {
-        src: "/logos/monday.svg",
-        alt: "Monday logo",
-        width: 48,
-        height: 48,
-      },
-      {
-        src: "/logos/drive.svg",
-        alt: "Google Drive logo",
-        width: 48,
-        height: 48,
-      },
-      {
-        src: "/logos/jira.svg",
-        alt: "Jira logo",
-        width: 48,
-        height: 48,
-      },
-      { src: "/logos/asana.svg", alt: "Asana logo", width: 48, height: 48 },
-    ],
+    title: "Choose your voice.",
+    description: "Select from our library of professional AI narrators.",
+    component: VoiceSelectionStep,
     className:
-      "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 md:[&>.title-container]:translate-x-2 xl:[&>.title-container]:translate-x-4 [&>.title-container]:translate-x-0",
-    fade: [],
+      "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8",
   },
 ];
 
 const bottomItems = [
   {
-    title: "Graveyard it.",
+    title: "AI conversion.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.",
-    images: [
-      {
-        src: "/resource-allocation/graveyard.webp",
-        alt: "Graveyard interface",
-        width: 305,
-        height: 280,
-      },
-    ],
+      "Our advanced AI converts your text to natural-sounding speech.",
+    component: AIConversionStep,
     className:
-      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
-    fade: ["bottom"],
+      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8",
   },
   {
-    title: "Task discussions.",
+    title: "Review & revise.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
-    images: [
-      {
-        src: "/resource-allocation/discussions.webp",
-        alt: "Task discussions interface",
-        width: 320,
-        height: 103,
-      },
-    ],
+      "Listen to your audiobook and request up to 3 revisions at no extra cost.",
+    component: ReviewStep,
     className:
-      "justify-normal [&>.title-container]:mb-5 md:[&>.title-container]:mb-0 [&>.image-container]:flex-1 md:[&>.image-container]:place-items-center md:[&>.image-container]:-translate-y-3",
-    fade: [""],
+      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8",
   },
   {
-    title: "Notifications.",
+    title: "Publish everywhere.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
-    images: [
-      {
-        src: "/resource-allocation/notifications.webp",
-        alt: "Notifications interface",
-        width: 305,
-        height: 280,
-      },
-    ],
+      "Receive your audiobook in formats compatible with all major platforms.",
+    component: PublishStep,
     className:
-      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
-    fade: ["bottom"],
+      "[&>.title-container]:mb-5 md:[&>.title-container]:mb-8",
   },
 ];
 
@@ -119,7 +60,7 @@ export const ResourceAllocation = () => {
     >
       <div className="">
         <h2 className="container text-center text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
-          Mainline your resource allocation and execution
+          From manuscript to audiobook in simple steps
         </h2>
 
         <div className="mt-8 md:mt-12 lg:mt-20">
@@ -167,6 +108,8 @@ interface ItemProps {
 }
 
 const Item = ({ item, isLast, className }: ItemProps) => {
+  const Component = item.component;
+
   return (
     <div
       className={cn(
@@ -175,69 +118,14 @@ const Item = ({ item, isLast, className }: ItemProps) => {
         item.className,
       )}
     >
-      <div className="title-container text-balance">
+      <div className="title-container text-balance mb-6">
         <h3 className="inline font-semibold">{item.title} </h3>
         <span className="text-muted-foreground"> {item.description}</span>
       </div>
 
-      {item.fade.includes("bottom") && (
-        <div className="from-muted/80 absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent md:hidden" />
-      )}
-      {item.images.length > 4 ? (
-        <div className="relative overflow-hidden">
-          <div className="flex flex-col gap-5">
-            {/* First row - right aligned */}
-            <div className="flex translate-x-4 justify-end gap-5">
-              {item.images.slice(0, 4).map((image, j) => (
-                <div
-                  key={j}
-                  className="bg-background grid aspect-square size-16 place-items-center rounded-2xl p-2 lg:size-20"
-                >
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    width={image.width}
-                    height={image.height}
-                    className="object-contain object-left-top"
-                  />
-                  <div className="from-muted/80 absolute inset-y-0 right-0 z-10 w-16 bg-linear-to-l to-transparent" />
-                </div>
-              ))}
-            </div>
-            {/* Second row - left aligned */}
-            <div className="flex -translate-x-4 gap-5">
-              {item.images.slice(4).map((image, j) => (
-                <div
-                  key={j}
-                  className="bg-background grid aspect-square size-16 place-items-center rounded-2xl lg:size-20"
-                >
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    width={image.width}
-                    height={image.height}
-                    className="object-contain object-left-top"
-                  />
-                  <div className="from-muted absolute inset-y-0 bottom-0 left-0 z-10 w-14 bg-linear-to-r to-transparent" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      ) : (
-        <div className="image-container grid grid-cols-1 gap-4">
-          {item.images.map((image, j) => (
-            <Image
-              key={j}
-              src={image.src}
-              alt={image.alt}
-              width={image.width}
-              height={image.height}
-              className="object-contain object-left-top"
-            />
-          ))}
-        </div>
-      )}
+      <div className="component-container">
+        <Component />
+      </div>
 
       {!isLast && (
         <>

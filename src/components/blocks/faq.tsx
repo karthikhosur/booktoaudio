@@ -10,52 +10,52 @@ import { cn } from "@/lib/utils";
 
 const categories = [
   {
-    title: "Support",
+    title: "General",
     questions: [
       {
-        question: "How do I update my account without breaking my laptop?",
+        question: "What formats do you accept for manuscripts?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "We accept all major formats including PDF, Microsoft Word (.doc, .docx), plain text (.txt), and ePub files. Simply upload your manuscript and we'll handle the rest.",
       },
       {
-        question: "Is support free, or do I need to Google everything?",
+        question: "How long does the conversion process take?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Most audiobooks are completed within 5-7 business days from the time you approve the voice selection. Rush options are available for an additional fee.",
       },
       {
-        question: "Are you going to be subsumed by AI?",
+        question: "What does a revision include?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Each revision allows you to request changes to pronunciation, pacing, emphasis, or any section you'd like re-recorded. You get 3 revision rounds included at no extra cost.",
       },
     ],
   },
   {
-    title: "Your account",
+    title: "Pricing & Quality",
     questions: [
       {
-        question: "Is support free, or do I need to Google everything?",
+        question: "Are there any additional fees?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "No hidden fees! Our transparent pricing is $100 per 10,000 words, which includes 3 revision rounds, professional mastering, and files formatted for all major publishing platforms.",
       },
       {
-        question: "Are you going to be subsumed by AI?",
+        question: "How does AI narration compare to human narrators?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Our state-of-the-art AI voices are nearly indistinguishable from human narrators, offering natural inflection, emotion, and pacing. Many authors prefer AI for consistency across long works and faster turnaround times.",
       },
     ],
   },
   {
-    title: "Other questions",
+    title: "Publishing",
     questions: [
       {
-        question: "Is support free, or do I need to Google everything?",
+        question: "Can I publish the audiobook on Audible and other platforms?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Yes! We provide your audiobook in formats compatible with all major platforms including Audible, Apple Books, Google Play Books, and more. You retain full rights to your audiobook.",
       },
       {
-        question: "Are you going to be subsumed by AI?",
+        question: "What file formats will I receive?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "You'll receive your audiobook in MP3 and M4B formats, along with separate chapter files if needed. All files are professionally mastered and ready for immediate publishing.",
       },
     ],
   },
@@ -73,7 +73,7 @@ export const FAQ = ({
   return (
     <section className={cn("py-28 lg:py-32", className)}>
       <div className="container max-w-5xl">
-        <div className={cn("mx-auto grid gap-16 lg:grid-cols-2", className2)}>
+        <div className={cn("mx-auto grid gap-10 lg:grid-cols-2 lg:gap-16", className2)}>
           <div className="space-y-4">
             {headerTag === "h1" ? (
               <h1 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
@@ -84,7 +84,7 @@ export const FAQ = ({
                 Got Questions?
               </h2>
             )}
-            <p className="text-muted-foreground max-w-md leading-snug lg:mx-auto">
+            <p className="text-muted-foreground leading-snug text-base lg:text-lg">
               If you can't find what you're looking for,{" "}
               <Link href="/contact" className="underline underline-offset-4">
                 get in touch

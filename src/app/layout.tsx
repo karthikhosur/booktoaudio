@@ -63,29 +63,26 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Mainline - Modern Next.js Template",
-    template: "%s | Mainline",
+    default: "BookToAudio - Professional AI Audiobook Conversion",
+    template: "%s | BookToAudio",
   },
   description:
-    "A modern Next.js template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
+    "Transform your book into a professional audiobook with state-of-the-art AI voices. Just $100 per 10,000 words with 3 revisions included.",
   keywords: [
-    "Next.js",
-    "nextjs template",
-    "nextjs theme",
-    "nextjs starter",
-    "shadcn template",
-    "shadcn theme",
-    "shadcn starter",
-    "tailwind template",
-    "tailwind theme",
-    "tailwind starter",
-    "mdx template",
-    "mdx theme",
-    "mdx starter",
+    "audiobook conversion",
+    "AI audiobook",
+    "book to audio",
+    "audiobook creation",
+    "AI narration",
+    "audiobook production",
+    "text to speech",
+    "professional narration",
+    "audiobook publishing",
+    "indie author audiobook",
   ],
-  authors: [{ name: "shadcnblocks.com" }],
-  creator: "shadcnblocks.com",
-  publisher: "shadcnblocks.com",
+  authors: [{ name: "BookToAudio" }],
+  creator: "BookToAudio",
+  publisher: "BookToAudio",
   robots: {
     index: true,
     follow: true,
@@ -102,26 +99,26 @@ export const metadata: Metadata = {
     shortcut: [{ url: "/favicon/favicon.ico" }],
   },
   openGraph: {
-    title: "Mainline - Modern Next.js Template",
+    title: "BookToAudio - Professional AI Audiobook Conversion",
     description:
-      "A modern Next.js template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
-    siteName: "Mainline",
+      "Transform your book into a professional audiobook with state-of-the-art AI voices. Just $100 per 10,000 words with 3 revisions included.",
+    siteName: "BookToAudio",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Mainline - Modern Next.js Template",
+        alt: "BookToAudio - Professional AI Audiobook Conversion",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mainline - Modern Next.js Template",
+    title: "BookToAudio - Professional AI Audiobook Conversion",
     description:
-      "A modern Next.js template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
+      "Transform your book into a professional audiobook with state-of-the-art AI voices. Just $100 per 10,000 words with 3 revisions included.",
     images: ["/og-image.jpg"],
-    creator: "@ausrobdev",
+    creator: "@booktoaudio",
   },
 };
 

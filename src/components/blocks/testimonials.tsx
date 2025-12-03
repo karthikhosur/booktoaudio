@@ -17,59 +17,59 @@ import { cn } from "@/lib/utils";
 
 const items = [
   {
-    quote: "We're misusing Mainline as a CRM and it still works!",
-    author: "Amy Chase",
-    role: "PM",
-    company: "Mercury Finance",
+    quote: "The AI narration quality blew me away. My readers can't tell it's not a professional human narrator!",
+    author: "Sarah Mitchell",
+    role: "Author",
+    company: "Fantasy Fiction",
     image: "/testimonials/amy-chase.webp",
   },
   {
-    quote: "I was able to replace 80% of my team with Mainline bots.",
-    author: "Jonas Kotara",
-    role: "Lead Engineer",
-    company: "Mercury Finance",
+    quote: "At $100 per 10k words with 3 revisions included, this is an absolute steal. I've published 5 audiobooks with BookToAudio now.",
+    author: "Marcus Chen",
+    role: "Independent Author",
+    company: "Thriller Novels",
     image: "/testimonials/jonas-kotara.webp",
   },
   {
-    quote: "Founder Mode is hard enough without having a really nice PM app.",
-    author: "Kevin Yam",
-    role: "Founder",
-    company: "Mercury Finance",
+    quote: "The turnaround time was incredible. My audiobook was ready in less than a week!",
+    author: "Jennifer Adams",
+    role: "Publisher",
+    company: "Indie Publishing House",
     image: "/testimonials/kevin-yam.webp",
   },
   {
-    quote: "I can use the tool as a substitute from my PM.",
-    author: "Kundo Marta",
-    role: "Founder",
-    company: "Mercury Finance",
+    quote: "Finally, an affordable way to get professional audiobook quality. Game changer for indie authors.",
+    author: "David Park",
+    role: "Author",
+    company: "Science Fiction",
     image: "/testimonials/kundo-marta.webp",
   },
   {
-    quote: "We're misusing Mainline as a CRM and it still works!",
-    author: "Amy Chase",
-    role: "PM",
-    company: "Mercury Finance",
+    quote: "The AI narration quality blew me away. My readers can't tell it's not a professional human narrator!",
+    author: "Sarah Mitchell",
+    role: "Author",
+    company: "Fantasy Fiction",
     image: "/testimonials/amy-chase.webp",
   },
   {
-    quote: "I was able to replace 80% of my team with Mainline bots.",
-    author: "Jonas Kotara",
-    role: "Lead Engineer",
-    company: "Mercury Finance",
+    quote: "At $100 per 10k words with 3 revisions included, this is an absolute steal. I've published 5 audiobooks with BookToAudio now.",
+    author: "Marcus Chen",
+    role: "Independent Author",
+    company: "Thriller Novels",
     image: "/testimonials/jonas-kotara.webp",
   },
   {
-    quote: "Founder Mode is hard enough without having a really nice PM app.",
-    author: "Kevin Yam",
-    role: "Founder",
-    company: "Mercury Finance",
+    quote: "The turnaround time was incredible. My audiobook was ready in less than a week!",
+    author: "Jennifer Adams",
+    role: "Publisher",
+    company: "Indie Publishing House",
     image: "/testimonials/kevin-yam.webp",
   },
   {
-    quote: "I can use the tool as a substitute from my PM.",
-    author: "Kundo Marta",
-    role: "Founder",
-    company: "Mercury Finance",
+    quote: "Finally, an affordable way to get professional audiobook quality. Game changer for indie authors.",
+    author: "David Park",
+    role: "Author",
+    company: "Science Fiction",
     image: "/testimonials/kundo-marta.webp",
   },
 ];
@@ -85,17 +85,17 @@ export const Testimonials = ({
     <>
       <section className={cn("overflow-hidden py-28 lg:py-32", className)}>
         <div className="container">
-          <div className="space-y-4">
+          <div className="space-y-4 max-w-3xl">
             <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-              Trusted by product builders
+              Trusted by authors worldwide
             </h2>
-            <p className="text-muted-foreground max-w-md leading-snug">
-              Mainline is built on the habits that make the best product teams
-              successful: staying focused, moving quickly, and always aiming for
-              high-quality work.
+            <p className="text-muted-foreground leading-snug text-base lg:text-lg">
+              Join thousands of authors and publishers who have transformed their books
+              into professional audiobooks with BookToAudio's state-of-the-art AI conversion
+              technology.
             </p>
             <Button variant="outline" className="shadow-md">
-              Read our Customer Stories <ArrowRight className="size-4" />
+              Read our Success Stories <ArrowRight className="size-4" />
             </Button>
           </div>
 

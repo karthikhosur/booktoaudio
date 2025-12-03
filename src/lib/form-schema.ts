@@ -16,3 +16,12 @@ export const formSchema = z.object({
   message: z.string({ message: "This field is required" }),
   agree: z.literal(true, { message: "This field is required" }),
 });
+
+export const getStartedFormSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Invalid email address"),
+  phone: z.string().optional(),
+  bookTitle: z.string().min(1, "Book title is required"),
+  wordCount: z.string().optional(),
+  message: z.string().optional(),
+});

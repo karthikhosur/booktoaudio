@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 
 import {
@@ -10,50 +13,52 @@ import {
 
 import { DashedLine } from "@/components/dashed-line";
 import { Button } from "@/components/ui/button";
+import { GetStartedModal } from "@/components/get-started-modal";
 
 const features = [
   {
-    title: "Tailored workflows",
-    description: "Track progress across custom issue flows for your team.",
+    title: "State-of-the-art AI voices",
+    description: "Professional narration with natural, human-like voices.",
     icon: CircleDot,
   },
   {
-    title: "Cross-team projects",
-    description: "Collaborate across teams and departments.",
+    title: "3 revisions included",
+    description: "Perfect your audiobook with three rounds of revisions.",
     icon: Blend,
   },
   {
-    title: "Milestones",
-    description: "Break projects down into concrete phases.",
+    title: "Publishing ready",
+    description: "Formatted and optimized for all major platforms.",
     icon: Diamond,
   },
   {
-    title: "Progress insights",
-    description: "Track scope, velocity, and progress over time.",
+    title: "Fast turnaround",
+    description: "Get your audiobook ready in days, not weeks.",
     icon: ChartNoAxesColumn,
   },
 ];
 
 export const Hero = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <section className="py-28 lg:py-32 lg:pt-44">
-      <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
+    <>
+      <GetStartedModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <section className="py-28 lg:py-32 lg:pt-44">
+      <div className="container flex flex-col gap-8 md:gap-14 lg:flex-row lg:gap-20">
         {/* Left side - Main content */}
-        <div className="flex-1">
-          <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-nowrap">
-            Mainline Next.js template
+        <div className="flex-1 lg:max-w-2xl">
+          <h1 className="text-foreground text-3xl tracking-tight md:text-4xl lg:text-5xl">
+            Transform Your Book Into an Audiobook
           </h1>
 
-          <p className="text-muted-foreground text-1xl mt-5 md:text-3xl">
-            Mainline is an open-source website template built with shadcn/ui,
-            Tailwind 4 & Next.js
+          <p className="text-muted-foreground mt-5 text-lg md:text-xl lg:text-2xl">
+            Professional audiobook conversion with state-of-the-art AI voices. Just $100 per 10,000 words.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
-            <Button asChild>
-              <a href="https://github.com/shadcnblocks/mainline-nextjs-template">
-                Get template
-              </a>
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <Button onClick={() => setIsModalOpen(true)}>
+              Get started - $100/10k words
             </Button>
             <Button
               variant="outline"
@@ -61,18 +66,18 @@ export const Hero = () => {
               asChild
             >
               <a
-                href="https://shadcnblocks.com"
-                className="max-w-56 truncate text-start md:max-w-none"
+                href="#feature-modern-teams"
+                className="flex items-center gap-2"
               >
-                Built by shadcnblocks.com
-                <ArrowRight className="stroke-3" />
+                Learn more
+                <ArrowRight className="size-4" />
               </a>
             </Button>
           </div>
         </div>
 
         {/* Right side - Features */}
-        <div className="relative flex flex-1 flex-col justify-center space-y-5 max-lg:pt-10 lg:pl-10">
+        <div className="relative flex flex-1 flex-col justify-center space-y-5 pt-10 lg:pl-10 lg:pt-0">
           <DashedLine
             orientation="vertical"
             className="absolute top-0 left-0 max-lg:hidden"
@@ -87,10 +92,10 @@ export const Hero = () => {
               <div key={feature.title} className="flex gap-2.5 lg:gap-5">
                 <Icon className="text-foreground mt-1 size-4 shrink-0 lg:size-5" />
                 <div>
-                  <h2 className="font-text text-foreground font-semibold">
+                  <h3 className="font-text text-foreground font-semibold">
                     {feature.title}
-                  </h2>
-                  <p className="text-muted-foreground max-w-76 text-sm">
+                  </h3>
+                  <p className="text-muted-foreground text-sm">
                     {feature.description}
                   </p>
                 </div>
@@ -111,5 +116,6 @@ export const Hero = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };

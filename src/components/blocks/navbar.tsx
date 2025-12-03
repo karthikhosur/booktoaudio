@@ -6,10 +6,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { ChevronRight, Github } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
+import { GetStartedModal } from "@/components/get-started-modal";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -26,19 +27,18 @@ const ITEMS = [
     href: "#features",
     dropdownItems: [
       {
-        title: "Modern product teams",
+        title: "Professional AI Voices",
         href: "/#feature-modern-teams",
         description:
-          "Mainline is built on the habits that make the best product teams successful",
+          "State-of-the-art AI narration that sounds natural and professional",
       },
       {
-        title: "Resource Allocation",
+        title: "How It Works",
         href: "/#resource-allocation",
-        description: "Mainline your resource allocation and execution",
+        description: "From manuscript to audiobook in simple steps",
       },
     ],
   },
-  { label: "About Us", href: "/about" },
   { label: "Pricing", href: "/pricing" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
@@ -47,10 +47,13 @@ const ITEMS = [
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const pathname = usePathname();
 
   return (
-    <section
+    <>
+      <GetStartedModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <section
       className={cn(
         "bg-background/70 absolute left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300",
         "top-5 lg:top-12",
@@ -120,18 +123,9 @@ export const Navbar = () => {
         {/* Auth Buttons */}
         <div className="flex items-center gap-2.5">
           <ThemeToggle />
-          <Link href="/login" className="max-lg:hidden">
-            <Button variant="outline">
-              <span className="relative z-10">Login</span>
-            </Button>
-          </Link>
-          <a
-            href="https://github.com/shadcnblocks/mainline-nextjs-template"
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <Github className="size-4" />
-            <span className="sr-only">GitHub</span>
-          </a>
+          <Button onClick={() => setIsModalOpen(true)} className="max-lg:hidden">
+            <span className="relative z-10">Get Started</span>
+          </Button>
 
           {/* Hamburger Menu Button (Mobile Only) */}
           <button
@@ -236,5 +230,6 @@ export const Navbar = () => {
         </nav>
       </div>
     </section>
+    </>
   );
 };
