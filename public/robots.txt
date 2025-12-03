@@ -1,0 +1,10 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow API routes and Next.js internals
+Disallow: /api/
+Disallow: /_next/
+
+# Sitemap location
+Sitemap: https://booktoaudio.cloud/sitemap.xml

@@ -63,6 +63,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://booktoaudio.cloud"),
   title: {
     default: "BookToAudio - Professional AI Audiobook Conversion",
     template: "%s | BookToAudio",
@@ -100,6 +101,8 @@ export const metadata: Metadata = {
     shortcut: [{ url: "/favicon/favicon.ico" }],
   },
   openGraph: {
+    type: "website",
+    url: "https://booktoaudio.cloud",
     title: "BookToAudio - Professional AI Audiobook Conversion",
     description:
       "Transform your book into a professional audiobook with state-of-the-art AI voices. Just $100 per 10,000 words with 3 revisions included.",
