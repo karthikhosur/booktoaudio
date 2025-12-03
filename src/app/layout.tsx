@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { Footer } from "@/components/blocks/footer";
 import { Navbar } from "@/components/blocks/navbar";
 import { StyleGlideProvider } from "@/components/styleglide-provider";
+import { StructuredData } from "@/components/structured-data";
 import { ThemeProvider } from "@/components/theme-provider";
 import "@/styles/globals.css";
 
@@ -137,6 +138,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${dmSans.variable} ${inter.variable} antialiased`}>
+        <StructuredData />
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
