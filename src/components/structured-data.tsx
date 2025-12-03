@@ -3,8 +3,8 @@ export function StructuredData() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "BookToAudio",
-    "url": "https://booktoaudio.com",
-    "logo": "https://booktoaudio.com/logo.svg",
+    "url": "https://booktoaudio.cloud",
+    "logo": "https://booktoaudio.cloud/logo.svg",
     "description": "Production-grade AI audiobook conversion service for authors and publishers",
     "contactPoint": {
       "@type": "ContactPoint",
@@ -65,25 +65,25 @@ export function StructuredData() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://booktoaudio.com"
+        "item": "https://booktoaudio.cloud"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Pricing",
-        "item": "https://booktoaudio.com/pricing"
+        "item": "https://booktoaudio.cloud/pricing"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "FAQ",
-        "item": "https://booktoaudio.com/faq"
+        "item": "https://booktoaudio.cloud/faq"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "Contact",
-        "item": "https://booktoaudio.com/contact"
+        "item": "https://booktoaudio.cloud/contact"
       }
     ]
   };
