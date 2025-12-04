@@ -40,9 +40,11 @@ export const Features = () => {
             Made for authors and publishers
           </h2>
           <p className="text-muted-foreground leading-snug text-base lg:text-lg">
-            BookToAudio delivers professional-grade audiobook conversion using
-            cutting-edge AI technology. Your story deserves to be heard with
-            crystal-clear quality and natural narration.
+            BookToAudio delivers production-grade audiobook conversion using
+            cutting-edge AI technology combined with human-in-the-loop quality assurance.
+            Our expert team reviews every audiobook to ensure natural pacing, emotional
+            depth, and a truly realistic listening experience. Your story deserves to be
+            heard with crystal-clear quality and human-perfected narration.
           </p>
         </div>
 

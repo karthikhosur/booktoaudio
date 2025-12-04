@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     template: "%s | BookToAudio - AI Audiobook Production",
   },
   description:
-    "Transform your book into a production-grade audiobook with state-of-the-art AI voices. Professional narration at just $100 per 10,000 words with 3 free revisions. Fast turnaround, publishing-ready format for Audible, Apple Books & more.",
+    "Transform your book into a production-grade audiobook with state-of-the-art AI voices and human-in-the-loop quality assurance. Expert human oversight ensures realistic, natural narration at just $100 per 10,000 words with 3 free revisions. Fast turnaround, publishing-ready format for Audible, Apple Books & more.",
   keywords: [
     "audiobook conversion",
     "AI audiobook",
@@ -91,6 +91,11 @@ export const metadata: Metadata = {
     "audiobook maker",
     "automated audiobook",
     "book narration service",
+    "human in the loop AI",
+    "AI with human oversight",
+    "quality assurance audiobook",
+    "realistic AI narration",
+    "human-reviewed audiobook",
   ],
   authors: [{ name: "BookToAudio", url: "https://booktoaudio.cloud" }],
   creator: "BookToAudio",

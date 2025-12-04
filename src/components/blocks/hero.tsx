@@ -8,6 +8,7 @@ import {
   ChartNoAxesColumn,
   CircleDot,
   Diamond,
+  UserCheck,
 } from "lucide-react";
 
 import { DashedLine } from "@/components/dashed-line";
@@ -20,6 +21,11 @@ const features = [
     title: "State-of-the-art AI voices",
     description: "Professional narration with natural, human-like voices.",
     icon: CircleDot,
+  },
+  {
+    title: "Human-in-the-loop quality",
+    description: "Expert human oversight ensures realistic, natural narration.",
+    icon: UserCheck,
   },
   {
     title: "3 revisions included",
@@ -53,7 +59,7 @@ export const Hero = () => {
           </h1>
 
           <p className="text-muted-foreground mt-5 text-lg md:text-xl lg:text-2xl">
-            Professional audiobook conversion with state-of-the-art AI voices. Just $100 per 10,000 words.
+            Professional audiobook conversion with state-of-the-art AI voices and human-in-the-loop quality assurance for realistic, natural narration. Just $100 per 10,000 words.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">

@@ -35,12 +35,17 @@ const categories = [
       {
         question: "Are there any additional fees?",
         answer:
-          "No hidden fees! Our transparent pricing is $100 per 10,000 words, which includes 3 revision rounds, professional mastering, and files formatted for all major publishing platforms.",
+          "No hidden fees! Our transparent pricing is $100 per 10,000 words, which includes 3 revision rounds, professional mastering, human quality assurance, and files formatted for all major publishing platforms.",
+      },
+      {
+        question: "What is human-in-the-loop quality assurance?",
+        answer:
+          "Every audiobook goes through expert human review to ensure realistic narration. Our team checks for natural pacing, emotional depth, proper pronunciation, and overall listening quality. This combination of AI efficiency and human expertise delivers the most natural, engaging audiobooks possible.",
       },
       {
         question: "How does AI narration compare to human narrators?",
         answer:
-          "Our state-of-the-art AI voices are nearly indistinguishable from human narrators, offering natural inflection, emotion, and pacing. Many authors prefer AI for consistency across long works and faster turnaround times.",
+          "Our state-of-the-art AI voices, combined with human-in-the-loop oversight, are nearly indistinguishable from traditional human narrators. We offer natural inflection, emotion, and pacing, with the added benefit of consistency across long works and faster turnaround times—all at a fraction of the cost.",
       },
     ],
   },

@@ -55,8 +55,8 @@ export function StructuredData() {
     "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": "Audiobook Production",
-    "name": "AI Audiobook Conversion Service",
-    "description": "Transform your book into a production-grade audiobook with state-of-the-art AI voices. Professional narration at $100 per 10,000 words with 3 free revisions.",
+    "name": "AI Audiobook Conversion Service with Human Quality Assurance",
+    "description": "Transform your book into a production-grade audiobook with state-of-the-art AI voices and human-in-the-loop quality assurance. Expert human oversight ensures realistic, natural narration. Professional narration at $100 per 10,000 words with 3 free revisions.",
     "brand": {
       "@type": "Brand",
       "name": "BookToAudio"
@@ -204,6 +204,14 @@ export function StructuredData() {
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "We offer a wide selection of professional-quality AI voices with various accents, genders, and tones. You can preview and select the perfect voice for your book during the ordering process."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is human-in-the-loop quality assurance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every audiobook goes through expert human review to ensure realistic narration. Our team checks for natural pacing, emotional depth, proper pronunciation, and overall listening quality. This combination of AI efficiency and human expertise delivers the most natural, engaging audiobooks possible."
         }
       }
     ]
