@@ -55,6 +55,30 @@ export function VoicePlayground() {
     setError(null);
     setAudioData(null);
 
+    // Check if using default sample text - if so, use pre-generated file
+    if (text.trim() === SAMPLE_TEXT.trim()) {
+      try {
+        const response = await fetch(`/voices/${selectedVoice}.wav`);
+        if (response.ok) {
+          const blob = await response.blob();
+          const arrayBuffer = await blob.arrayBuffer();
+          const base64Audio = btoa(
+            new Uint8Array(arrayBuffer).reduce(
+              (data, byte) => data + String.fromCharCode(byte),
+              ""
+            )
+          );
+          setAudioData(base64Audio);
+          setIsGenerating(false);
+          return;
+        }
+      } catch (err) {
+        // Fall through to API call if pre-generated file fails
+        console.log("Pre-generated file not found, using API");
+      }
+    }
+
+    // Use API for custom text or if pre-generated file not available
     const result = await generateSpeech(text, selectedVoice);
 
     if (result.success && result.audio) {
