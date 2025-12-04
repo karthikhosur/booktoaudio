@@ -1,24 +1,26 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { ChevronRight } from "lucide-react";
 
 import { DashedLine } from "../dashed-line";
+import { AudioWaveformVisual } from "../feature-visuals/audio-waveform-visual";
+import { PlatformCompatibilityVisual } from "../feature-visuals/platform-compatibility-visual";
+import { VoiceSelectionVisual } from "../feature-visuals/voice-selection-visual";
 
 import { Card, CardContent } from "@/components/ui/card";
 
 const items = [
   {
     title: "Premium AI voice selection",
-    image: "/features/triage-card.svg",
+    component: VoiceSelectionVisual,
   },
   {
     title: "Professional audio quality",
-    image: "/features/cycle-card.svg",
+    component: AudioWaveformVisual,
   },
   {
     title: "Multi-platform compatibility",
-    image: "/features/overview-card.svg",
+    component: PlatformCompatibilityVisual,
   },
 ];
 
@@ -66,14 +68,8 @@ export const Features = () => {
             {items.map((item, i) => (
               <div key={i} className="flex flex-1 max-md:flex-col">
                 <article className="flex-1 p-4 pe-0! md:p-6">
-                  <div className="relative aspect-[1.28/1] overflow-hidden">
-                    <Image
-                      src={item.image}
-                      alt={`${item.title} - Professional audiobook conversion feature showcasing BookToAudio's AI technology`}
-                      fill
-                      className="object-cover object-left-top ps-4 pt-2"
-                    />
-                    <div className="from-background absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent" />
+                  <div className="relative aspect-[1.28/1] overflow-hidden rounded-lg">
+                    <item.component />
                   </div>
 
                   <Link
