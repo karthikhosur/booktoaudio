@@ -1,11 +1,13 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 
 import Link from "next/link";
 
 import { Facebook, Linkedin, Twitter } from "lucide-react";
 
-import { ContactForm } from "@/components/blocks/contact-form";
-import { DashedLine } from "@/components/dashed-line";
+import { GetStartedModal } from "@/components/get-started-modal";
+import { Button } from "@/components/ui/button";
 
 const contactInfo = [
   {
@@ -43,33 +45,40 @@ const contactInfo = [
 ];
 
 export default function Contact() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <section className="py-28 lg:py-32 lg:pt-44">
-      <div className="container max-w-2xl">
-        <h1 className="text-center text-2xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
-          Contact us
-        </h1>
-        <p className="text-muted-foreground mt-4 text-center leading-snug font-medium lg:mx-auto">
-          Hopefully this form gets through our spam filters.
-        </p>
+    <>
+      <GetStartedModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <section className="py-28 lg:py-32 lg:pt-44">
+        <div className="container max-w-2xl">
+          <h1 className="text-center text-2xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
+            Contact us
+          </h1>
+          <p className="text-muted-foreground mt-4 text-center leading-snug font-medium lg:mx-auto">
+            Ready to transform your book into an audiobook? We'd love to hear from you!
+          </p>
 
-        <div className="mt-10 flex justify-between gap-8 max-sm:flex-col md:mt-14 lg:mt-20 lg:gap-12">
-          {contactInfo.map((info, index) => (
-            <div key={index}>
-              <h2 className="font-medium">{info.title}</h2>
-              {info.content}
-            </div>
-          ))}
+          <div className="mt-10 flex justify-between gap-8 max-sm:flex-col md:mt-14 lg:mt-20 lg:gap-12">
+            {contactInfo.map((info, index) => (
+              <div key={index}>
+                <h2 className="font-medium">{info.title}</h2>
+                {info.content}
+              </div>
+            ))}
+          </div>
+
+          {/* Get Started Button */}
+          <div className="mt-12 text-center">
+            <Button onClick={() => setIsModalOpen(true)} size="lg">
+              Get Started - $100/10k words
+            </Button>
+            <p className="text-muted-foreground text-sm mt-4">
+              Fill out our simple form and we'll get back to you within 24 hours
+            </p>
+          </div>
         </div>
-
-        <DashedLine className="my-12" />
-
-        {/* Inquiry Form */}
-        <div className="mx-auto">
-          <h2 className="mb-4 text-lg font-semibold">Inquiries</h2>
-          <ContactForm />
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
