@@ -1,9 +1,9 @@
 import { DashedLine } from "../dashed-line";
+import { AIConversionStep } from "../process-steps/ai-conversion-step";
+import { PublishStep } from "../process-steps/publish-step";
+import { ReviewStep } from "../process-steps/review-step";
 import { UploadStep } from "../process-steps/upload-step";
 import { VoiceSelectionStep } from "../process-steps/voice-selection-step";
-import { AIConversionStep } from "../process-steps/ai-conversion-step";
-import { ReviewStep } from "../process-steps/review-step";
-import { PublishStep } from "../process-steps/publish-step";
 
 import { cn } from "@/lib/utils";
 

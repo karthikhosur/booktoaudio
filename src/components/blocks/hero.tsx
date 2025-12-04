@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+
 import Image from "next/image";
 
 import {
@@ -12,8 +13,8 @@ import {
 } from "lucide-react";
 
 import { DashedLine } from "@/components/dashed-line";
-import { Button } from "@/components/ui/button";
 import { GetStartedModal } from "@/components/get-started-modal";
+import { Button } from "@/components/ui/button";
 
 const features = [
   {

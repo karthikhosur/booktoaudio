@@ -8,9 +8,9 @@ import { usePathname } from "next/navigation";
 
 import { ChevronRight } from "lucide-react";
 
+import { GetStartedModal } from "@/components/get-started-modal";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
-import { GetStartedModal } from "@/components/get-started-modal";
 import {
   NavigationMenu,
   NavigationMenuContent,

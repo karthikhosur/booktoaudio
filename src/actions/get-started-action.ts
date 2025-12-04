@@ -1,13 +1,14 @@
 "use server";
+
 import { actionClient } from "./safe-action";
+
 import { getStartedFormSchema } from "@/lib/form-schema";
+
 
 export const getStartedAction = actionClient
   .inputSchema(getStartedFormSchema)
   .action(async ({ parsedInput }) => {
     try {
-      console.log("Sending email with data:", parsedInput);
-
       // Send email via MailBirdie
       const emailResponse = await fetch("https://mail.mailbirdie.com/api/v1/email/send", {
         method: "POST",
@@ -41,24 +42,16 @@ Message: ${parsedInput.message || "No additional message"}
       });
 
       const responseData = await emailResponse.json();
-      console.log("Email API Response:", responseData);
-      console.log("Response Status:", emailResponse.status);
 
       if (!emailResponse.ok) {
-        console.error("Email API Error:", responseData);
         throw new Error(`Failed to send email: ${JSON.stringify(responseData)}`);
       }
-
-      console.log("Email sent successfully!");
 
       return {
         success: true,
         message: "Thank you! We'll get back to you soon.",
       };
     } catch (error) {
-      console.error("Error sending email:", error);
-      console.error("Error details:", error instanceof Error ? error.message : error);
-
       throw error; // Re-throw to trigger the onError handler
     }
   });

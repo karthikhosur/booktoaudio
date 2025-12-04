@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
+
 import { Check } from "lucide-react";
 
+import { GetStartedModal } from "@/components/get-started-modal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { GetStartedModal } from "@/components/get-started-modal";
 
 const plans = [
   {

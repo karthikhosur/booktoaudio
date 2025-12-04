@@ -5,8 +5,8 @@ import type { Metadata } from "next";
 
 import { Footer } from "@/components/blocks/footer";
 import { Navbar } from "@/components/blocks/navbar";
-import { StyleGlideProvider } from "@/components/styleglide-provider";
 import { StructuredData } from "@/components/structured-data";
+import { StyleGlideProvider } from "@/components/styleglide-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import "@/styles/globals.css";
 
