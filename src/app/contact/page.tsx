@@ -8,7 +8,7 @@ import Contact from "@/components/blocks/contact";
 export const metadata: Metadata = {
   title: "Contact Us - Get Started with Your Audiobook Conversion | BookToAudio",
   description:
-    "Have questions about converting your book to an audiobook? Contact BookToAudio for a free consultation. Email us at karthik@talentmicro.com or use our contact form. We respond within 24 hours and offer personalized audiobook production guidance.",
+    "Have questions about converting your book to an audiobook? Contact BookToAudio for a free consultation. Email us at info@localeos.co or use our contact form. We respond within 24 hours and offer personalized audiobook production guidance.",
   keywords: [
     "contact audiobook service",
     "audiobook conversion support",

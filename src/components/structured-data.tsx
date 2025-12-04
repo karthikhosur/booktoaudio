@@ -36,7 +36,7 @@ export function StructuredData() {
     "foundingDate": "2024",
     "contactPoint": {
       "@type": "ContactPoint",
-      "email": "karthik@talentmicro.com",
+      "email": "info@localeos.co",
       "contactType": "Customer Service",
       "availableLanguage": ["English"],
       "areaServed": "Worldwide"

@@ -151,7 +151,7 @@ export function GetStartedModal({ isOpen, onClose }: GetStartedModalProps) {
                           <FormItem>
                             <FormLabel>Email Address *</FormLabel>
                             <FormControl>
-                              <Input {...field} type="email" placeholder="john@example.com" />
+                              <Input {...field} type="email" placeholder="info@localeos.co" />
                             </FormControl>
                             <FormMessage />
                           </FormItem>

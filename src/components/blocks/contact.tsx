@@ -9,37 +9,15 @@ import { DashedLine } from "@/components/dashed-line";
 
 const contactInfo = [
   {
-    title: "Corporate office",
-    content: (
-      <p className="text-muted-foreground mt-3">
-        1 Carlsberg Close
-        <br />
-        1260 Hillview, Australia
-      </p>
-    ),
-  },
-  {
     title: "Email us",
     content: (
       <div className="mt-3">
-        <div>
-          <p className="">Careers</p>
-          <Link
-            href="mailto:careers@example.com"
-            className="text-muted-foreground hover:text-foreground"
-          >
-            careers@example.com
-          </Link>
-        </div>
-        <div className="mt-1">
-          <p className="">Press</p>
-          <Link
-            href="mailto:press@example.com"
-            className="text-muted-foreground hover:text-foreground"
-          >
-            press@example.com
-          </Link>
-        </div>
+        <Link
+          href="mailto:info@localeos.co"
+          className="text-muted-foreground hover:text-foreground"
+        >
+          info@localeos.co
+        </Link>
       </div>
     ),
   },

@@ -133,7 +133,7 @@ export function ContactForm() {
                     const val = e.target.value;
                     field.onChange(val);
                   }}
-                  placeholder="me@company.com"
+                  placeholder="info@localeos.co"
                 />
               </FormControl>
 

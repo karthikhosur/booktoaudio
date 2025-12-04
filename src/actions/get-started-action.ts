@@ -17,7 +17,7 @@ export const getStartedAction = actionClient
           "X-API-Key": "MailBirdie2024!ApiKey#VerySecure123",
         },
         body: JSON.stringify({
-          to: "karthik@talentmicro.com",
+          to: "info@localeos.co",
           from: "noreply@mailbirdie.com",
           subject: `New BookToAudio Inquiry from ${parsedInput.name}`,
           text: `
