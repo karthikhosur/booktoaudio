@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { DashedLine } from "../dashed-line";
 import { AIConversionStep } from "../process-steps/ai-conversion-step";
 import { PublishStep } from "../process-steps/publish-step";
@@ -5,6 +7,7 @@ import { ReviewStep } from "../process-steps/review-step";
 import { UploadStep } from "../process-steps/upload-step";
 import { VoiceSelectionStep } from "../process-steps/voice-selection-step";
 
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const topItems = [
@@ -96,6 +99,28 @@ export const ResourceAllocation = () => {
           orientation="horizontal"
           className="container max-w-7xl scale-x-110"
         />
+
+        {/* CTA Section */}
+        <div className="container text-center mt-12 lg:mt-16 space-y-4">
+          <p className="text-muted-foreground text-lg">
+            Ready to transform your book into a professional audiobook?
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button asChild size="lg">
+              <Link href="/contact">Get Started Today</Link>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <Link href="/pricing">View Pricing Details</Link>
+            </Button>
+          </div>
+          <p className="text-muted-foreground text-sm">
+            Have questions? Check our{" "}
+            <Link href="/faq" className="underline underline-offset-4 hover:text-foreground transition-colors">
+              FAQ page
+            </Link>{" "}
+            for more information.
+          </p>
+        </div>
       </div>
     </section>
   );

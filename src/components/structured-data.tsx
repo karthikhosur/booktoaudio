@@ -154,6 +154,69 @@ export function StructuredData() {
     ]
   };
 
+  const howToData = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Convert Your Book to an Audiobook with AI",
+    "description": "Step-by-step guide to converting your book into a professional audiobook using BookToAudio's AI-powered conversion service with human-in-the-loop quality assurance.",
+    "image": "https://booktoaudio.cloud/og-image.jpg",
+    "estimatedCost": {
+      "@type": "MonetaryAmount",
+      "currency": "USD",
+      "value": "100"
+    },
+    "totalTime": "P7D",
+    "supply": [
+      {
+        "@type": "HowToSupply",
+        "name": "Your manuscript in digital format (PDF, Word, ePub, or TXT)"
+      }
+    ],
+    "tool": [
+      {
+        "@type": "HowToTool",
+        "name": "BookToAudio AI Conversion Platform"
+      }
+    ],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Upload Your Manuscript",
+        "text": "Upload your book manuscript in any format (PDF, Word, ePub, or plain text). Our system accepts all major file formats.",
+        "url": "https://booktoaudio.cloud/contact"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Select Your AI Voice",
+        "text": "Preview and select from our collection of professional AI voices with various accents and tones. Choose the perfect voice that matches your book's style and genre.",
+        "url": "https://booktoaudio.cloud#preview"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "AI Conversion with Human Quality Review",
+        "text": "Our state-of-the-art AI converts your text to speech while our expert team performs human-in-the-loop quality assurance to ensure natural pacing, proper pronunciation, and emotional depth.",
+        "url": "https://booktoaudio.cloud/faq"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Review and Request Revisions",
+        "text": "Listen to your audiobook and request up to 3 free revisions for any sections you'd like adjusted. We'll refine the narration until you're completely satisfied.",
+        "url": "https://booktoaudio.cloud/faq"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Receive Publishing-Ready Files",
+        "text": "Download your professionally mastered audiobook in formats compatible with all major platforms including Audible, Apple Books, and Google Play Books.",
+        "url": "https://booktoaudio.cloud/pricing"
+      }
+    ]
+  };
+
   const faqData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -234,6 +297,10 @@ export function StructuredData() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToData) }}
       />
       <script
         type="application/ld+json"

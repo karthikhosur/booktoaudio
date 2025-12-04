@@ -42,7 +42,6 @@ export async function generateSpeech(text: string, voice: VoiceName) {
       voice: voice,
     };
   } catch (error) {
-    console.error("Error generating speech:", error);
     return {
       success: false,
       error: error instanceof Error ? error.message : "Failed to generate speech",

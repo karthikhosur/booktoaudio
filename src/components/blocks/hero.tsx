@@ -13,8 +13,8 @@ import {
 
 import { DashedLine } from "@/components/dashed-line";
 import { GetStartedModal } from "@/components/get-started-modal";
-import { VoicePlayground } from "@/components/voice-playground";
 import { Button } from "@/components/ui/button";
+import { VoicePlayground } from "@/components/voice-playground";
 
 const features = [
   {

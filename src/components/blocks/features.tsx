@@ -39,13 +39,25 @@ export const Features = () => {
           <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
             Made for authors and publishers
           </h2>
-          <p className="text-muted-foreground leading-snug text-base lg:text-lg">
-            BookToAudio delivers production-grade audiobook conversion using
-            cutting-edge AI technology combined with human-in-the-loop quality assurance.
-            Our expert team reviews every audiobook to ensure natural pacing, emotional
-            depth, and a truly realistic listening experience. Your story deserves to be
-            heard with crystal-clear quality and human-perfected narration.
-          </p>
+          <div className="space-y-4">
+            <p className="text-muted-foreground leading-snug text-base lg:text-lg">
+              BookToAudio delivers production-grade audiobook conversion using
+              cutting-edge AI technology combined with{" "}
+              <Link href="/faq" className="underline underline-offset-4 hover:text-foreground transition-colors">
+                human-in-the-loop quality assurance
+              </Link>
+              . Our expert team reviews every audiobook to ensure natural pacing, emotional
+              depth, and a truly realistic listening experience. Your story deserves to be
+              heard with crystal-clear quality and human-perfected narration.
+            </p>
+            <p className="text-muted-foreground text-sm">
+              Starting at just{" "}
+              <Link href="/pricing" className="underline underline-offset-4 hover:text-foreground transition-colors font-medium">
+                $100 per 10,000 words
+              </Link>{" "}
+              with 3 free revisions included.
+            </p>
+          </div>
         </div>
 
         {/* Features Card */}
@@ -53,11 +65,11 @@ export const Features = () => {
           <CardContent className="flex p-0 max-md:flex-col">
             {items.map((item, i) => (
               <div key={i} className="flex flex-1 max-md:flex-col">
-                <div className="flex-1 p-4 pe-0! md:p-6">
+                <article className="flex-1 p-4 pe-0! md:p-6">
                   <div className="relative aspect-[1.28/1] overflow-hidden">
                     <Image
                       src={item.image}
-                      alt={`${item.title} interface`}
+                      alt={`${item.title} - Professional audiobook conversion feature showcasing BookToAudio's AI technology`}
                       fill
                       className="object-cover object-left-top ps-4 pt-2"
                     />
@@ -69,22 +81,23 @@ export const Features = () => {
                     className={
                       "group flex items-center justify-between gap-4 pe-4 pt-4 md:pe-6 md:pt-6"
                     }
+                    aria-label={`Learn more about ${item.title}`}
                   >
                     <h3 className="font-display max-w-60 text-2xl leading-tight font-bold tracking-tight">
                       {item.title}
                     </h3>
-                    <div className="rounded-full border p-2">
+                    <div className="rounded-full border p-2" aria-hidden="true">
                       <ChevronRight className="size-6 transition-transform group-hover:translate-x-1 lg:size-9" />
                     </div>
                   </Link>
-                </div>
+                </article>
                 {i < items.length - 1 && (
-                  <div className="relative hidden md:block">
+                  <div className="relative hidden md:block" role="separator" aria-hidden="true">
                     <DashedLine orientation="vertical" />
                   </div>
                 )}
                 {i < items.length - 1 && (
-                  <div className="relative block md:hidden">
+                  <div className="relative block md:hidden" role="separator" aria-hidden="true">
                     <DashedLine orientation="horizontal" />
                   </div>
                 )}

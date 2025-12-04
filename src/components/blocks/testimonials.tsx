@@ -118,7 +118,7 @@ export const Testimonials = ({
                         <div className="relative h-[288px] lg:h-[328px]">
                           <Image
                             src={testimonial.image}
-                            alt={testimonial.author}
+                            alt={`${testimonial.author}, ${testimonial.role} at ${testimonial.company}`}
                             fill
                             className="object-cover object-top"
                           />
